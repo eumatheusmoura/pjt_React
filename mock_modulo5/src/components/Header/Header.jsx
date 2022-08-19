@@ -9,7 +9,7 @@ const Header = () => {
       <h1 className={S.titulo}>especial para você</h1>
       <p className={S.paragrafo}>
         Todos os produtos desta lista foram selecionados a partir da sua
-        navegação. Aproveite!
+        navegação. Aproveite!!!
       </p>
       <div className={S.menuItens}>
         <Menu menu="Conheça a Linx" />
