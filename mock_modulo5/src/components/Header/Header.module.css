@@ -1,0 +1,32 @@
+.container {
+  max-width: 1500px;
+  height: 400px;
+  max-height: 100%;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgb(72, 67, 67);
+  background-image: linear-gradient(3deg, #fff 20%, #707070 20%);
+  padding: 3rem 0rem;
+}
+
+.subtitulo {
+  font-size: 1.3rem;
+}
+
+.titulo {
+  margin-top: 1rem;
+  font-size: 3rem;
+}
+
+.paragrafo {
+  margin-top: 2.9rem;
+  font-size: 1rem;
+}
+
+.menuItens {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
