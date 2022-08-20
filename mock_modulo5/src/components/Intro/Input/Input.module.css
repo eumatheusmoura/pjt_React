@@ -1,0 +1,20 @@
+.Input {
+  font-size: 14px;
+  border: 1px solid #888888;
+  width: 350px;
+  height: 40px;
+  padding-left: 5px;
+  margin-top: 7px;
+  margin-bottom: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.InputRadio {
+  height: 10px;
+  margin-right: 5px;
+}

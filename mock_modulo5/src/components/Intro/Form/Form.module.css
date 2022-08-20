@@ -1,0 +1,23 @@
+.Formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnEnviar {
+  color: #888888;
+  background-color: transparent;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 10px 148px;
+  margin-top: 23px;
+  margin-bottom: 50px;
+}
+
+.ContainerRadio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  gap: 30px;
+}
