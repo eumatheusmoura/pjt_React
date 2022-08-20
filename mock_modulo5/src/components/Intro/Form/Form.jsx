@@ -1,6 +1,6 @@
 import React from "react";
 import S from "./Form.module.css";
-import Label from "./Label";
+import Label from "../Label/Label";
 
 const Form = () => {
   return (

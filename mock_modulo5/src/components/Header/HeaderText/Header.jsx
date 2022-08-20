@@ -1,6 +1,6 @@
 import React from "react";
 import S from "./Header.module.css";
-import Menu from "./Menu";
+import Menu from "../Menu/Menu";
 
 const Header = () => {
   return (

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import S from "./App.css";
-import Header from "./components/Header/Header";
-import Intro from "./components/Intro/Intro";
+import Header from "./components/Header/HeaderText/Header";
+import Intro from "./components/Intro/Intro/Intro";
 
 function App() {
   return (
