@@ -1,0 +1,31 @@
+.Titulo {
+  overflow: hidden;
+  margin: 0px auto;
+  margin-top: 60px;
+  max-width: 900px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  color: #888888;
+}
+.Titulo > span {
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+}
+.Titulo > span:before,
+.Titulo > span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  border-bottom: 1px solid;
+  width: 591px;
+  margin: 0 20px;
+}
+.Titulo > span:before {
+  right: 100%;
+}
+.Titulo > span:after {
+  left: 100%;
+}
