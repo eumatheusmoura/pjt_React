@@ -17,6 +17,10 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-
   gap: 30px;
+}
+
+.Validacao {
+  color: red;
+  font-size: 10px;
 }
