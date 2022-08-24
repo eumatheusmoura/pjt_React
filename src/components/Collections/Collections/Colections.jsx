@@ -20,7 +20,6 @@ const Colections = () => {
         setLoading(false);
         setTotalPage(json.nextPage);
         setApiData([...apiData, ...json.products]);
-        console.log(apiData);
       } catch (error) {
         console.log(error);
       }

@@ -9,31 +9,25 @@ const Form = () => {
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   const [email, setEmail] = useState("");
-  const [nome, setNome] = useState("");
   const [validacao, setValidacao] = useState("");
   const [nomeValidacao, setNomeValidacao] = useState("");
-  const [msd, setMsg] = useState("");
+  const [cpfValidacao, setCpfValidacao] = useState("");
 
-  const submit = (e) => {
-    e.preventDefault();
-    if (email === "") {
-      setValidacao("O campo e-mail não pode ser vazio");
-    } else {
-      setValidacao("");
-    }
+  const checkCpf = (e) => {
+    setCpfValidacao(e.target.value);
 
-    if (nome === "") {
-      setNomeValidacao("Informe um nome válido");
+    if (e.target.value === "") {
+      setCpfValidacao("O campo CPF não pode ser vazio");
     } else {
-      nomeValidacao("");
+      setCpfValidacao("");
     }
   };
 
   const checkNome = (e) => {
-    setNome(e.target.value);
+    setNomeValidacao(e.target.value);
 
-    if (nome === "") {
-      setNomeValidacao("Informe um nome válido");
+    if (e.target.value === "") {
+      setNomeValidacao("O campo nome não pode ser vazio");
     } else {
       setNomeValidacao("");
     }
@@ -42,10 +36,13 @@ const Form = () => {
   const checkEmail = (e) => {
     setEmail(e.target.value);
 
-    if (regex.test(email) === false || email === "") {
+    if (regex.test(email) === false) {
       setValidacao("Informe um e-mail válido");
+    } else if (e.target.value === "") {
+      setValidacao("O campo e-mail não pode ser vazio");
     } else {
       setValidacao("");
+      return true;
     }
   };
 
@@ -70,7 +67,14 @@ const Form = () => {
       />
       <p className={S.Validacao}>{validacao}</p>
       <Label htmlFor="cpf" nome="CPF" />
-      <Input className={I.Input} type="number" id="cpf" />
+      <Input
+        onChange={checkCpf}
+        className={I.Input}
+        type="text"
+        id="cpf"
+        maxLength="14"
+      />
+      <p className={S.Validacao}>{cpfValidacao}</p>
       <div className={S.ContainerRadio}>
         <div>
           <input
@@ -97,7 +101,7 @@ const Form = () => {
           <Label forName="feminino" nome="Feminino" />
         </div>
       </div>
-      <button onClick={submit} className={S.btnEnviar} type="submit">
+      <button className={S.btnEnviar} type="submit">
         Enviar
       </button>
     </form>

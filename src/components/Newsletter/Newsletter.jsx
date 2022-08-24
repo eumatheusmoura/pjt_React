@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import Titulo from "../Collections/Titulo/Titulo";
 import Input from "../Intro/Input/Input";
 import Label from "../Intro/Label/Label";
+
 import S from "../Newsletter/Newsletter.module.css";
 import I from "../Intro/Input/Input.module.css";
 

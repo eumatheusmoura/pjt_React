@@ -1,7 +1,7 @@
 import React from "react";
 import S from "../Input/Input.module.css";
 
-const Input = ({ type, id, className, name, value, onChange }) => {
+const Input = ({ type, id, className, name, value, onChange, maxLength }) => {
   return (
     <input
       onChange={onChange}
@@ -10,6 +10,7 @@ const Input = ({ type, id, className, name, value, onChange }) => {
       name={name}
       value={value}
       className={className}
+      maxLength={maxLength}
     />
   );
 };
